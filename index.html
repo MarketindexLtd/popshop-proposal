@@ -240,6 +240,22 @@ footer{background:var(--or);padding:18px 40px;display:flex;justify-content:space
 footer p{font-size:12px;font-weight:600;color:rgba(255,255,255,0.75)}
 footer strong{color:var(--wh)}
 
+
+/* BRAND DOODLES */
+.sec-hd{display:flex;justify-content:space-between;align-items:center;gap:48px}
+.sec-hd>div{flex:1;min-width:0}
+.doodle{flex-shrink:0;display:block;height:auto}
+.d-prob{width:200px;transform:rotate(-5deg)}
+.d-how{width:158px;transform:rotate(4deg)}
+.d-feat{width:150px;transform:rotate(-7deg)}
+.mark{position:absolute;pointer-events:none;user-select:none;z-index:0}
+.callout,.tq-box,.steps-wrap{position:relative;overflow:hidden}
+.callout>*,.tq-box>*,.steps-wrap>*{position:relative;z-index:1}
+.m-callout{right:-28px;bottom:-30px;width:240px;opacity:.22;transform:rotate(-8deg)}
+.m-tq{right:-20px;top:-34px;width:210px;opacity:.24;transform:rotate(9deg)}
+.m-steps{right:-30px;top:-18px;width:230px;opacity:.22;transform:rotate(-7deg)}
+.m-hero{right:-40px;top:-120px;width:470px;opacity:.85;z-index:1}
+
 @media(max-width:768px){
   nav{padding:0 20px}.nav-links{display:none}
   .hero,.wrap{padding-left:20px;padding-right:20px}
@@ -253,6 +269,11 @@ footer strong{color:var(--wh)}
   .contact-top{padding:40px 24px}.contact-ft{padding:16px 24px;flex-direction:column;gap:4px}
   footer{flex-direction:column;gap:4px;padding:16px 20px}
   .img-strip{grid-template-columns:1fr}
+  .sec-hd{flex-direction:column;align-items:flex-start;gap:0}
+  .doodle{margin-bottom:32px}
+  .d-prob,.d-how,.d-feat{width:132px}
+  .m-hero{width:240px;right:-60px;top:-40px}
+  .m-callout,.m-tq,.m-steps{width:150px}
 }
 </style>
 </head>
@@ -272,6 +293,7 @@ footer strong{color:var(--wh)}
 
 <!-- HERO -->
 <div id="top" class="hero">
+  <img class="mark m-hero" src="img/wathermark.webp" alt="" aria-hidden="true">
   <div class="hero-inner">
   <img src="https://d2gt4h1eeousrn.cloudfront.net/100929014/header-fcHJMd/KKBeRnQ-600x600.webp" alt="Popeyes Marketing" style="height:48px;margin-bottom:40px;display:block">
   <p class="hero-kicker">Prepared exclusively for Popeyes UK &nbsp;·&nbsp; June 2026</p>
@@ -340,9 +362,12 @@ footer strong{color:var(--wh)}
 <!-- PROBLEMS -->
 <div id="problem" class="sec">
   <div class="wrap">
-    <p class="kicker k-rd">The honest picture</p>
+    <div class="sec-hd">
+      <div><p class="kicker k-rd">The honest picture</p>
     <h2 class="sec-title">Six things the current<br>platform <span class="rd">cannot do.</span></h2>
-    <p class="sec-lead">The current PopShop site does the basics. But it was built on an off-the-shelf platform that was not designed for how a multi-site restaurant group actually works.</p>
+    <p class="sec-lead">The current PopShop site does the basics. But it was built on an off-the-shelf platform that was not designed for how a multi-site restaurant group actually works.</p></div>
+      <img class="doodle d-prob" src="img/section_12.webp" alt="" aria-hidden="true">
+    </div>
     <div class="prob-grid">
       <div class="prob-card"><span class="prob-num">01</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="9" r="5" stroke="#D90F06" stroke-width="1.5"/><path d="M4 25c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="3" x2="25" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="3" x2="20" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">No individual store accounts</p><p class="prob-desc">Anyone with the login can place an order. When an order comes in we cannot automatically tell which restaurant it is from. As you scale to 200 or 300 restaurants, this becomes a serious problem.</p></div>
       <div class="prob-card"><span class="prob-num">02</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="15" rx="2" stroke="#D90F06" stroke-width="1.5"/><path d="M3 9l11 7 11-7" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="24" x2="14" y2="20" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="26" x2="19" y2="26" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Manual email approval process</p><p class="prob-desc">When a store places an order, the email comes to us at Marketindex. We forward it to the area manager and wait for a reply. With 130 stores and growing, things slip through the cracks.</p></div>
@@ -360,6 +385,7 @@ footer strong{color:var(--wh)}
 <div class="sec" style="padding:48px 0" id="proposal">
   <div class="wrap">
     <div class="callout">
+        <img class="mark m-callout" src="img/section_2.webp" alt="" aria-hidden="true">
       <div>
         <p style="font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:16px">What we are proposing</p>
         <p class="callout-title">A custom portal. Built for Popeyes. Not anyone else.</p>
@@ -404,9 +430,12 @@ footer strong{color:var(--wh)}
 <!-- HOW IT WORKS -->
 <div id="how" class="sec">
   <div class="wrap">
-    <p class="kicker k-tq">How it works</p>
+    <div class="sec-hd">
+      <div><p class="kicker k-tq">How it works</p>
     <h2 class="sec-title">Store to door.<br><span class="tq">Five steps.</span></h2>
-    <p class="sec-lead">The complete order journey in the new portal, from a store placing an order right through to delivery at their door.</p>
+    <p class="sec-lead">The complete order journey in the new portal, from a store placing an order right through to delivery at their door.</p></div>
+      <img class="doodle d-how" src="img/section_1.webp" alt="" aria-hidden="true">
+    </div>
     <div class="flow">
       <div class="flow-step"><div class="flow-num">1</div><p class="flow-t">Store submits</p><p class="flow-d">Via their own secure account</p></div>
       <div class="flow-step"><div class="flow-num">2</div><p class="flow-t">Manager notified</p><p class="flow-d">Instant email and in-portal alert</p></div>
@@ -430,9 +459,12 @@ footer strong{color:var(--wh)}
 <!-- FEATURES -->
 <div id="features" class="sec">
   <div class="wrap">
-    <p class="kicker k-pu">What is included</p>
+    <div class="sec-hd">
+      <div><p class="kicker k-pu">What is included</p>
     <h2 class="sec-title">26 features.<br><span class="pu">All missing today.</span></h2>
-    <p class="sec-lead">Everything the new portal includes. None of this is possible with the current Ecwid setup.</p>
+    <p class="sec-lead">Everything the new portal includes. None of this is possible with the current Ecwid setup.</p></div>
+      <img class="doodle d-feat" src="img/section_3.webp" alt="" aria-hidden="true">
+    </div>
     <div class="feat-grp">
       <div class="feat-grp-hd"><div class="feat-dot"></div><span class="feat-lbl">Accounts and access</span></div>
       <div class="feat-grid">
@@ -488,6 +520,7 @@ footer strong{color:var(--wh)}
 <div class="sec" style="padding:48px 0">
   <div class="wrap">
     <div class="tq-box">
+      <img class="mark m-tq" src="img/section_6.webp" alt="" aria-hidden="true">
       <p class="tq-title">Four stages. Nothing switched off until the new portal is ready.</p>
       <p class="tq-body">We will build the new portal in stages so that each part is solid before we move on. The current site stays live throughout and nothing gets turned off until the new one is ready and tested.</p>
     </div>
@@ -513,6 +546,7 @@ footer strong{color:var(--wh)}
 <div class="sec" style="padding:48px 0">
   <div class="wrap">
     <div class="steps-wrap">
+      <img class="mark m-steps" src="img/section_9.webp" alt="" aria-hidden="true">
       <h2 class="steps-title">What happens <span>next.</span></h2>
       <div class="steps-grid">
         <div class="step-card"><div class="step-n">1</div><p class="step-txt">You review this proposal and let us know if there is anything you would like to change or add.</p></div>
