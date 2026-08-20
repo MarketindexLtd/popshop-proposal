@@ -250,7 +250,7 @@ footer strong{color:var(--wh)}
 .d-feat{width:150px;transform:rotate(-7deg)}
 .mark{position:absolute;pointer-events:none;user-select:none;z-index:0}
 .callout,.tq-box,.steps-wrap{position:relative;overflow:hidden}
-.callout>*,.tq-box>*,.steps-wrap>*{position:relative;z-index:1}
+.callout>*:not(.mark),.tq-box>*:not(.mark),.steps-wrap>*:not(.mark){position:relative;z-index:1}
 .m-callout{right:-28px;bottom:-30px;width:240px;opacity:.22;transform:rotate(-8deg)}
 .m-tq{right:-20px;top:-34px;width:210px;opacity:.24;transform:rotate(9deg)}
 .m-steps{right:-30px;top:-18px;width:230px;opacity:.22;transform:rotate(-7deg)}
