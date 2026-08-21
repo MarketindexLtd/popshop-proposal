@@ -37,9 +37,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
   max-width:none;
   margin:0;
   position:relative;
-  overflow:hidden;
   background:var(--of);
 }
+.hero-band{position:relative;overflow:hidden}
+.hero-desc-wrap{margin-top:48px;padding-top:40px;border-top:1px solid var(--bd);max-width:600px}
 .hero-inner{max-width:1000px;margin:0 auto;position:relative;z-index:2}
 
 
@@ -128,13 +129,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 
 /* BEFORE AFTER */
 .ba{display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--bd);border-radius:4px;overflow:hidden}
-.ba-hd{padding:16px 24px;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.ba-hd{height:48px;padding:0 24px;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center}
 .ba-before .ba-hd{background:var(--bk);color:var(--wh)}
 .ba-after .ba-hd{background:var(--or);color:var(--wh)}
-.ba-row{display:flex;align-items:center;gap:12px;padding:13px 24px;border-bottom:1px solid var(--bd);font-size:14px;font-weight:500;color:var(--bk);background:var(--wh)}
+.ba-row{display:flex;align-items:center;gap:12px;height:46px;padding:0 24px;border-bottom:1px solid var(--bd);font-size:14px;font-weight:500;color:var(--bk);background:var(--wh)}
 .ba-row:last-child{border-bottom:none}
-.ba-x{color:var(--lg);font-weight:800;flex-shrink:0}
-.ba-c{color:var(--or);font-weight:800;flex-shrink:0}
+.ba-x{width:14px;height:2px;background:var(--lg);flex-shrink:0}
+.ba-c{width:14px;height:14px;flex-shrink:0;position:relative}
+.ba-c::after{content:"";position:absolute;left:4px;top:1px;width:5px;height:10px;border:solid var(--or);border-width:0 2px 2px 0;transform:rotate(45deg)}
 .ba-mid{width:52px;display:flex;align-items:center;justify-content:center;background:var(--gy);border-left:1px solid var(--bd);border-right:1px solid var(--bd)}
 .ba-arr{width:32px;height:32px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--wh);font-weight:900}
 
@@ -248,7 +250,7 @@ footer strong{color:var(--wh)}
 .m-callout{right:-28px;bottom:-30px;width:240px;opacity:.22;transform:rotate(-8deg)}
 .m-tq{right:-20px;top:-34px;width:210px;opacity:.24;transform:rotate(9deg)}
 .m-steps{right:-30px;top:-18px;width:230px;opacity:.22;transform:rotate(-7deg)}
-.m-hero{right:max(0px,calc(50vw - 660px));top:-30px;width:min(46vw,620px);opacity:1;z-index:1}
+.m-hero{right:max(0px,calc(50vw - 660px));bottom:0;height:100%;width:auto;max-width:46vw;opacity:1;z-index:1}
 
 @media(max-width:768px){
   /* nav: keep the CTA reachable, drop the rest */
@@ -314,7 +316,8 @@ footer strong{color:var(--wh)}
   .sec-hd{flex-direction:column;align-items:flex-start;gap:0}
   .doodle{order:-1;margin-bottom:22px}
   .d-prob,.d-how,.d-feat{width:118px}
-  .m-hero{width:230px;right:-70px;top:-30px}
+  .m-hero{width:210px;height:auto;max-width:none;right:-60px;bottom:auto;top:36px}
+  .hero-desc-wrap{margin-top:30px;padding-top:26px}
   .m-callout,.m-tq,.m-steps{width:140px}
 }
 @media(max-width:400px){
@@ -341,29 +344,28 @@ footer strong{color:var(--wh)}
   </ul>
 </nav>
 
-<!-- HERO -->
-<div id="top" class="hero">
+<!-- HERO + STATS (one band so the watermark is not clipped between them) -->
+<div class="hero-band">
   <img class="mark m-hero" src="img/wathermark.webp" alt="" aria-hidden="true">
-  <div class="hero-inner">
-  <p class="hero-kicker">Prepared exclusively for Popeyes UK &nbsp;·&nbsp; June 2026</p>
-  <h1 class="hero-headline">A new <span class="or">PopShop.</span><br>Built for the future.</h1>
-  <div style="margin-top:48px;padding-top:40px;border-top:1px solid var(--bd);max-width:600px">
-    <p class="hero-desc">A <strong>purpose-built ordering portal</strong> designed specifically around the way Popeyes UK operates. Built to handle your growth, give your team full visibility, and take the manual steps out of day-to-day ordering.</p>
-  </div>
-</div>
 
-  </div><!-- /hero-inner -->
-</div>
-
-<!-- STATS -->
-<div class="wrap">
-  <div class="stat-row">
-    <div class="stat-cell"><div class="stat-n">130+</div><div class="stat-l">Restaurants on PopShop today</div></div>
-    <div class="stat-cell"><div class="stat-n">3-4</div><div class="stat-l">New stores opening per month</div></div>
-    <div class="stat-cell"><div class="stat-n">100+</div><div class="stat-l">Products in the catalogue</div></div>
-    <div class="stat-cell"><div class="stat-n">26</div><div class="stat-l">New features included</div></div>
+  <div id="top" class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">Prepared exclusively for Popeyes UK &nbsp;&middot;&nbsp; June 2026</p>
+      <h1 class="hero-headline">A new <span class="or">PopShop.</span><br>Built for the future.</h1>
+      <div class="hero-desc-wrap">
+        <p class="hero-desc">A <strong>purpose-built ordering portal</strong> designed specifically around the way Popeyes UK operates. Built to handle your growth, give your team full visibility, and take the manual steps out of day-to-day ordering.</p>
+      </div>
+    </div>
   </div>
-</div>
+
+  <div class="wrap">
+    <div class="stat-row">
+      <div class="stat-cell"><div class="stat-n">130+</div><div class="stat-l">Restaurants on PopShop today</div></div>
+      <div class="stat-cell"><div class="stat-n">3-4</div><div class="stat-l">New stores opening per month</div></div>
+      <div class="stat-cell"><div class="stat-n">100+</div><div class="stat-l">Products in the catalogue</div></div>
+      <div class="stat-cell"><div class="stat-n">26</div><div class="stat-l">New features included</div></div>
+    </div>
+  </div>
 </div>
 
 <!-- INTRO -->
@@ -405,7 +407,6 @@ footer strong{color:var(--wh)}
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- PROBLEMS -->
@@ -452,28 +453,27 @@ footer strong{color:var(--wh)}
     <div class="ba">
       <div class="ba-col ba-before">
         <div class="ba-hd">Today</div>
-        <div class="ba-row"><span class="ba-x">–</span>Shared login for all stores</div>
-        <div class="ba-row"><span class="ba-x">–</span>Manual email approval process</div>
-        <div class="ba-row"><span class="ba-x">–</span>Area managers updated by email</div>
-        <div class="ba-row"><span class="ba-x">–</span>Same catalogue for every store</div>
-        <div class="ba-row"><span class="ba-x">–</span>Order updates by email</div>
-        <div class="ba-row"><span class="ba-x">–</span>Spend tracked outside the platform</div>
-        <div class="ba-row"><span class="ba-x">–</span>Store onboarding done by hand</div>
+        <div class="ba-row"><span class="ba-x"></span>Shared login for all stores</div>
+        <div class="ba-row"><span class="ba-x"></span>Manual email approval process</div>
+        <div class="ba-row"><span class="ba-x"></span>Area managers updated by email</div>
+        <div class="ba-row"><span class="ba-x"></span>Same catalogue for every store</div>
+        <div class="ba-row"><span class="ba-x"></span>Order updates by email</div>
+        <div class="ba-row"><span class="ba-x"></span>Spend tracked outside the platform</div>
+        <div class="ba-row"><span class="ba-x"></span>Store onboarding done by hand</div>
       </div>
       <div class="ba-mid"><div class="ba-arr">→</div></div>
       <div class="ba-col ba-after">
-        <div class="ba-hd">✓ &nbsp; With the new portal</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Individual store login and account</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Automatic approval workflow</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Full area manager dashboard</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Smart catalogue tailored per store</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Live order tracking for all stores</div>
-        <div class="ba-row"><span class="ba-c">✓</span>Full spend reporting for head office</div>
-        <div class="ba-row"><span class="ba-c">✓</span>New store live in under 2 minutes</div>
+        <div class="ba-hd">With the new portal</div>
+        <div class="ba-row"><span class="ba-c"></span>Individual store login and account</div>
+        <div class="ba-row"><span class="ba-c"></span>Automatic approval workflow</div>
+        <div class="ba-row"><span class="ba-c"></span>Full area manager dashboard</div>
+        <div class="ba-row"><span class="ba-c"></span>Smart catalogue tailored per store</div>
+        <div class="ba-row"><span class="ba-c"></span>Live order tracking for all stores</div>
+        <div class="ba-row"><span class="ba-c"></span>Full spend reporting for head office</div>
+        <div class="ba-row"><span class="ba-c"></span>New store live in under 2 minutes</div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- HOW IT WORKS -->
@@ -563,7 +563,6 @@ footer strong{color:var(--wh)}
     </div>
   </div>
 </div>
-</div>
 
 <!-- TEAL BOX -->
 <div class="sec sec-tight">
@@ -588,7 +587,6 @@ footer strong{color:var(--wh)}
       <div class="tl-row"><div class="tl-left"><div class="tl-num">4</div></div><div class="tl-right"><p class="tl-lbl">Stage four</p><p class="tl-title">Reporting and advanced features</p><p class="tl-desc">Spend reporting, campaign calendar, campaign packs, bulk ordering for area managers, the reorder button, spending limit warnings, regional and seasonal targeting, and more.</p></div></div>
     </div>
   </div>
-</div>
 </div>
 
 <!-- STEPS -->
