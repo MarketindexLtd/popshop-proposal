@@ -33,7 +33,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 
 /* HERO */
 .hero{
-  padding:140px 40px 80px;
+  padding:120px 40px 60px;
   max-width:none;
   margin:0;
   position:relative;
@@ -72,7 +72,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 .stat-l{font-size:12px;font-weight:500;color:var(--lg);line-height:1.4;text-transform:uppercase;letter-spacing:0.05em}
 
 /* SECTION */
-.sec{padding:96px 0}
+.sec{padding:60px 0}
+.sec-tight{padding:30px 0}
+.sec-contact{padding:30px 0 64px}
+.feat-grp-next{margin-top:28px}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:20px}
 .kicker::before{content:'';width:20px;height:2px;display:block}
 .k-or{color:var(--or)}.k-or::before{background:var(--or)}
@@ -81,7 +84,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 .k-rd{color:var(--rd)}.k-rd::before{background:var(--rd)}
 .sec-title{font-size:clamp(36px,5vw,64px);font-weight:900;line-height:1.0;letter-spacing:-2px;color:var(--bk);margin-bottom:24px}
 .sec-title .or{color:var(--or)}.sec-title .tq{color:var(--tq)}.sec-title .pu{color:var(--pu)}.sec-title .rd{color:var(--rd)}
-.sec-lead{font-size:17px;color:var(--mg);line-height:1.75;max-width:560px;margin-bottom:52px}
+.sec-lead{font-size:17px;color:var(--mg);line-height:1.75;max-width:560px;margin-bottom:38px}
 .div{height:1px;background:var(--bd);max-width:1080px;margin:0 auto}
 
 /* INTRO */
@@ -127,17 +130,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 /* BEFORE AFTER */
 .ba{display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--bd);border-radius:4px;overflow:hidden}
 .ba-hd{padding:16px 24px;font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
-.ba-before .ba-hd{background:var(--rd);color:var(--wh)}
+.ba-before .ba-hd{background:var(--bk);color:var(--wh)}
 .ba-after .ba-hd{background:var(--or);color:var(--wh)}
 .ba-row{display:flex;align-items:center;gap:12px;padding:13px 24px;border-bottom:1px solid var(--bd);font-size:14px;font-weight:500;color:var(--bk);background:var(--wh)}
 .ba-row:last-child{border-bottom:none}
-.ba-x{color:var(--rd);font-weight:800;flex-shrink:0}
+.ba-x{color:var(--lg);font-weight:800;flex-shrink:0}
 .ba-c{color:var(--or);font-weight:800;flex-shrink:0}
 .ba-mid{width:52px;display:flex;align-items:center;justify-content:center;background:var(--gy);border-left:1px solid var(--bd);border-right:1px solid var(--bd)}
 .ba-arr{width:32px;height:32px;border-radius:50%;background:var(--or);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--wh);font-weight:900}
 
 /* FLOW */
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:4px;overflow:hidden;margin-bottom:60px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:4px;overflow:hidden;margin-bottom:44px}
 .flow-step{background:var(--wh);padding:28px 16px;text-align:center}
 .flow-num{width:44px;height:44px;border-radius:50%;font-size:18px;font-weight:900;color:var(--wh);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
 .flow-step:nth-child(1) .flow-num{background:var(--or)}
@@ -168,7 +171,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--wh);border-
 
 
 /* FEATURES */
-.feat-grp{margin-bottom:40px}
+.feat-grp{margin-bottom:32px}
 .feat-grp:last-child{margin-bottom:0}
 .feat-grp-hd{display:flex;align-items:center;gap:10px;margin-bottom:2px}
 .feat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
@@ -265,8 +268,15 @@ footer strong{color:var(--wh)}
   .nav-cta{padding:8px 16px}
 
   .hero,.wrap{padding-left:20px;padding-right:20px}
-  .hero{padding-top:104px;padding-bottom:56px}
-  .sec{padding:64px 0}
+  .hero{padding-top:92px;padding-bottom:36px}
+  .sec{padding:34px 0}
+  .sec-tight{padding:18px 0}
+  .sec-contact{padding:18px 0 34px}
+  .feat-grp{margin-bottom:22px}
+  .feat-grp-next{margin-top:20px}
+  .sec-lead{margin-bottom:26px}
+  .sec-title{margin-bottom:16px}
+  .kicker{margin-bottom:14px}
   .hero-headline{letter-spacing:-1.2px}
   .sec-title{font-size:32px;letter-spacing:-1.2px}
 
@@ -289,7 +299,7 @@ footer strong{color:var(--wh)}
   .step-n{font-size:28px}
 
   /* all five journey steps must show — they were hidden before */
-  .flow{grid-template-columns:1fr;margin-bottom:44px}
+  .flow{grid-template-columns:1fr;margin-bottom:30px}
   .flow-step{display:flex;align-items:center;gap:14px;text-align:left;padding:16px 18px}
   .flow-num{width:34px;height:34px;font-size:15px;margin:0;flex-shrink:0}
   .flow-t{margin-bottom:2px}
@@ -332,7 +342,7 @@ footer strong{color:var(--wh)}
 <nav>
   <a href="#top" class="logo"><img src="https://d2gt4h1eeousrn.cloudfront.net/100929014/header-fcHJMd/KKBeRnQ-600x600.webp" alt="Popeyes Marketing" style="height:32px;display:block"></a>
   <ul class="nav-links">
-    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#problem">Why Now</a></li>
     <li><a href="#proposal">Our Proposal</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#features">Features</a></li>
@@ -348,7 +358,7 @@ footer strong{color:var(--wh)}
   <p class="hero-kicker">Prepared exclusively for Popeyes UK &nbsp;·&nbsp; June 2026</p>
   <h1 class="hero-headline">A new <span class="or">PopShop.</span><br>Built for the future.</h1>
   <div style="margin-top:48px;padding-top:40px;border-top:1px solid var(--bd);max-width:600px">
-    <p class="hero-desc">A <strong>purpose-built ordering portal</strong> designed specifically around the way Popeyes UK operates. Built to handle your growth, give your team full visibility, and replace the manual processes slowing you down.</p>
+    <p class="hero-desc">A <strong>purpose-built ordering portal</strong> designed specifically around the way Popeyes UK operates. Built to handle your growth, give your team full visibility, and take the manual steps out of day-to-day ordering.</p>
   </div>
 </div>
 
@@ -373,7 +383,7 @@ footer strong{color:var(--wh)}
       <div>
         <p class="kicker k-or">A note from Marketindex</p>
         <h2 class="sec-title">We've loved watching<br><span class="or">Popeyes grow.</span></h2>
-        <p class="intro-body">We have been running your PopShop ordering site for a while now. As you have expanded to over 130 restaurants and counting, we have started to notice that the current platform is beginning to hold you back rather than help you move forward.</p>
+        <p class="intro-body">We have been running your PopShop ordering site for a while now, and it has done its job well. As you have expanded to over 130 restaurants and counting, we can see how much further a purpose-built portal would take you.</p>
         <p class="intro-body">This document sets out our proposal for a brand new, purpose-built PopShop portal. One designed specifically around the way Popeyes operates, built to handle your growth, and giving your team the visibility and control they need.</p>
         <div class="pull">No technical jargon. Just a clear picture of what we're proposing and <span>why it matters.</span></div>
       </div>
@@ -395,7 +405,7 @@ footer strong{color:var(--wh)}
 <div class="div"></div>
 
 <!-- QUOTE -->
-<div class="sec" style="padding:64px 0">
+<div class="sec sec-tight">
   <div class="wrap">
     <div class="quote">
       <div class="quote-bar"></div>
@@ -412,18 +422,18 @@ footer strong{color:var(--wh)}
 <div id="problem" class="sec">
   <div class="wrap">
     <div class="sec-hd">
-      <div><p class="kicker k-rd">The honest picture</p>
-    <h2 class="sec-title">Six things the current<br>platform <span class="rd">cannot do.</span></h2>
-    <p class="sec-lead">The current PopShop site does the basics. But it was built on an off-the-shelf platform that was not designed for how a multi-site restaurant group actually works.</p></div>
+      <div><p class="kicker k-rd">Why now</p>
+    <h2 class="sec-title">Six things a growing<br>estate <span class="rd">now needs.</span></h2>
+    <p class="sec-lead">PopShop was set up as a straightforward ordering site, and that is exactly what it has been. What a 130-restaurant estate asks of it today is a different proposition.</p></div>
       <img class="doodle d-prob" src="img/section_12.webp" alt="" aria-hidden="true">
     </div>
     <div class="prob-grid">
-      <div class="prob-card"><span class="prob-num">01</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="9" r="5" stroke="#D90F06" stroke-width="1.5"/><path d="M4 25c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="3" x2="25" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="3" x2="20" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">No individual store accounts</p><p class="prob-desc">Anyone with the login can place an order. When an order comes in we cannot automatically tell which restaurant it is from. As you scale to 200 or 300 restaurants, this becomes a serious problem.</p></div>
-      <div class="prob-card"><span class="prob-num">02</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="15" rx="2" stroke="#D90F06" stroke-width="1.5"/><path d="M3 9l11 7 11-7" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="24" x2="14" y2="20" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="26" x2="19" y2="26" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Manual email approval process</p><p class="prob-desc">When a store places an order, the email comes to us at Marketindex. We forward it to the area manager and wait for a reply. With 130 stores and growing, things slip through the cracks.</p></div>
-      <div class="prob-card"><span class="prob-num">03</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="19" rx="2" stroke="#D90F06" stroke-width="1.5"/><line x1="3" y1="9" x2="25" y2="9" stroke="#D90F06" stroke-width="1.5"/><line x1="9" y1="15" x2="19" y2="15" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/><line x1="9" y1="18" x2="15" y2="18" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/></svg></div><p class="prob-title">Area managers have no dashboard</p><p class="prob-desc">There is no way for an area manager to see all the orders from their restaurants in one place. They only find out what has been ordered when we forward them an email.</p></div>
-      <div class="prob-card"><span class="prob-num">04</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="9" height="18" rx="1" stroke="#D90F06" stroke-width="1.5"/><rect x="16" y="5" width="9" height="18" rx="1" stroke="#D90F06" stroke-width="1.5"/><line x1="6" y1="10" x2="9" y2="10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="6" y1="13" x2="9" y2="13" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="10" x2="22" y2="10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="13" x2="22" y2="13" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Every store sees the same catalogue</p><p class="prob-desc">A halal restaurant, a drive-thru, and a family diner all see exactly the same materials. Stores wade through things that do not apply to them.</p></div>
-      <div class="prob-card"><span class="prob-num">05</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#D90F06" stroke-width="1.5"/><path d="M14 8v6l4 2" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Cannot keep pace with growth</p><p class="prob-desc">You are opening 3 to 4 new restaurants every month. The current system has no quick way to onboard a new store, assign them to the right area manager, or make sure they see the right materials.</p></div>
-      <div class="prob-card"><span class="prob-num">06</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="13" width="22" height="12" rx="2" stroke="#D90F06" stroke-width="1.5"/><path d="M9 13V10a5 5 0 0110 0v3" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="19" r="2" fill="#D90F06"/></svg></div><p class="prob-title">No spending visibility for head office</p><p class="prob-desc">No way to see what each restaurant is ordering or how much is being spent. No reporting, no oversight, no way to set or track budgets across the estate.</p></div>
+      <div class="prob-card"><span class="prob-num">01</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="9" r="5" stroke="#D90F06" stroke-width="1.5"/><path d="M4 25c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="3" x2="25" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="25" y1="3" x2="20" y2="8" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Ordering under each store&#39;s own account</p><p class="prob-desc">One shared login was perfectly workable at a handful of sites. At 200 or 300 restaurants, every order needs to identify the restaurant it came from automatically.</p></div>
+      <div class="prob-card"><span class="prob-num">02</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="15" rx="2" stroke="#D90F06" stroke-width="1.5"/><path d="M3 9l11 7 11-7" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="24" x2="14" y2="20" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="9" y1="26" x2="19" y2="26" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Approvals that route themselves</p><p class="prob-desc">Today an order emails us, and we forward it to the area manager. Automating that hand-off keeps everything moving as order volumes climb.</p></div>
+      <div class="prob-card"><span class="prob-num">03</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="22" height="19" rx="2" stroke="#D90F06" stroke-width="1.5"/><line x1="3" y1="9" x2="25" y2="9" stroke="#D90F06" stroke-width="1.5"/><line x1="9" y1="15" x2="19" y2="15" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/><line x1="9" y1="18" x2="15" y2="18" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/></svg></div><p class="prob-title">A dashboard for area managers</p><p class="prob-desc">Area managers are kept in the loop by email. Their own live view of every restaurant they look after would give them the whole picture at a glance.</p></div>
+      <div class="prob-card"><span class="prob-num">04</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="9" height="18" rx="1" stroke="#D90F06" stroke-width="1.5"/><rect x="16" y="5" width="9" height="18" rx="1" stroke="#D90F06" stroke-width="1.5"/><line x1="6" y1="10" x2="9" y2="10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="6" y1="13" x2="9" y2="13" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="10" x2="22" y2="10" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><line x1="19" y1="13" x2="22" y2="13" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">A catalogue tailored to each store</p><p class="prob-desc">A halal restaurant, a drive-thru and a family diner all browse the same list today. Showing each store only what applies to it saves everyone time.</p></div>
+      <div class="prob-card"><span class="prob-num">05</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="#D90F06" stroke-width="1.5"/><path d="M14 8v6l4 2" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/></svg></div><p class="prob-title">Onboarding that keeps up with you</p><p class="prob-desc">With 3 to 4 restaurants opening every month, adding a store, assigning its area manager and setting its materials should take a couple of minutes.</p></div>
+      <div class="prob-card"><span class="prob-num">06</span><div class="prob-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="13" width="22" height="12" rx="2" stroke="#D90F06" stroke-width="1.5"/><path d="M9 13V10a5 5 0 0110 0v3" stroke="#D90F06" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="19" r="2" fill="#D90F06"/></svg></div><p class="prob-title">Spend visibility for head office</p><p class="prob-desc">Reporting on what each restaurant orders and what it spends gives head office the oversight an estate of this size deserves.</p></div>
     </div>
   </div>
 </div>
@@ -431,7 +441,7 @@ footer strong{color:var(--wh)}
 <div class="div"></div>
 
 <!-- CALLOUT -->
-<div class="sec" style="padding:48px 0" id="proposal">
+<div class="sec sec-tight" id="proposal">
   <div class="wrap">
     <div class="callout">
         <img class="mark m-callout" src="img/section_2.webp" alt="" aria-hidden="true">
@@ -445,24 +455,24 @@ footer strong{color:var(--wh)}
 </div>
 
 <!-- BEFORE AFTER -->
-<div class="sec" style="padding:48px 0">
+<div class="sec sec-tight">
   <div class="wrap">
     <p class="kicker k-or" style="margin-bottom:20px">Before and after</p>
     <h2 class="sec-title" style="margin-bottom:40px">What changes with<br>the <span class="or">new portal.</span></h2>
     <div class="ba">
       <div class="ba-col ba-before">
-        <div class="ba-hd">✗ &nbsp; Before - Today</div>
-        <div class="ba-row"><span class="ba-x">✗</span>Shared login for all stores</div>
-        <div class="ba-row"><span class="ba-x">✗</span>Manual email approval process</div>
-        <div class="ba-row"><span class="ba-x">✗</span>No area manager dashboard</div>
-        <div class="ba-row"><span class="ba-x">✗</span>Same catalogue for every store</div>
-        <div class="ba-row"><span class="ba-x">✗</span>No live order status tracking</div>
-        <div class="ba-row"><span class="ba-x">✗</span>No head office spend reporting</div>
-        <div class="ba-row"><span class="ba-x">✗</span>Slow, manual store onboarding</div>
+        <div class="ba-hd">Today</div>
+        <div class="ba-row"><span class="ba-x">–</span>Shared login for all stores</div>
+        <div class="ba-row"><span class="ba-x">–</span>Manual email approval process</div>
+        <div class="ba-row"><span class="ba-x">–</span>Area managers updated by email</div>
+        <div class="ba-row"><span class="ba-x">–</span>Same catalogue for every store</div>
+        <div class="ba-row"><span class="ba-x">–</span>Order updates by email</div>
+        <div class="ba-row"><span class="ba-x">–</span>Spend tracked outside the platform</div>
+        <div class="ba-row"><span class="ba-x">–</span>Store onboarding done by hand</div>
       </div>
       <div class="ba-mid"><div class="ba-arr">→</div></div>
       <div class="ba-col ba-after">
-        <div class="ba-hd">✓ &nbsp; After - New Custom Portal</div>
+        <div class="ba-hd">✓ &nbsp; With the new portal</div>
         <div class="ba-row"><span class="ba-c">✓</span>Individual store login and account</div>
         <div class="ba-row"><span class="ba-c">✓</span>Automatic approval workflow</div>
         <div class="ba-row"><span class="ba-c">✓</span>Full area manager dashboard</div>
@@ -510,8 +520,8 @@ footer strong{color:var(--wh)}
   <div class="wrap">
     <div class="sec-hd">
       <div><p class="kicker k-pu">What is included</p>
-    <h2 class="sec-title">26 features.<br><span class="pu">All missing today.</span></h2>
-    <p class="sec-lead">Everything the new portal includes. None of this is possible with the current off-the-shelf platform.</p></div>
+    <h2 class="sec-title">26 features.<br><span class="pu">All built for you.</span></h2>
+    <p class="sec-lead">Everything the new portal includes, all of it shaped around the way Popeyes UK works today.</p></div>
       <img class="doodle d-feat" src="img/section_3.webp" alt="" aria-hidden="true">
     </div>
     <div class="feat-grp">
@@ -525,7 +535,7 @@ footer strong{color:var(--wh)}
         <div class="feat-card"><span class="feat-n">06</span><p class="feat-name">Fast store onboarding</p><p class="feat-desc">When a new restaurant opens, we can have them set up in under two minutes. Tagged, assigned, ready to order.</p></div>
       </div>
     </div>
-    <div class="feat-grp" style="margin-top:32px">
+    <div class="feat-grp feat-grp-next">
       <div class="feat-grp-hd"><div class="feat-dot"></div><span class="feat-lbl">Smart catalogues</span></div>
       <div class="feat-grid">
         <div class="feat-card"><span class="feat-n">07</span><p class="feat-name">Halal stores</p><p class="feat-desc">Halal-certified restaurants see halal-specific materials, Ramadan and Eid campaign items, and halal signage.</p></div>
@@ -536,7 +546,7 @@ footer strong{color:var(--wh)}
         <div class="feat-card"><span class="feat-n">12</span><p class="feat-name">Seasonal and limited time</p><p class="feat-desc">Ramadan materials appear for halal stores at the right time. Limited time materials only for participating stores.</p></div>
       </div>
     </div>
-    <div class="feat-grp" style="margin-top:32px">
+    <div class="feat-grp feat-grp-next">
       <div class="feat-grp-hd"><div class="feat-dot"></div><span class="feat-lbl">Approval process, sorted</span></div>
       <div class="feat-grid">
         <div class="feat-card"><span class="feat-n">13</span><p class="feat-name">Automatic approval workflow</p><p class="feat-desc">Orders go straight to the area manager. Nobody at Marketindex needs to forward anything manually.</p></div>
@@ -547,7 +557,7 @@ footer strong{color:var(--wh)}
         <div class="feat-card"><span class="feat-n">18</span><p class="feat-name">Order approval limits</p><p class="feat-desc">Orders above a certain value can require head office sign-off.</p></div>
       </div>
     </div>
-    <div class="feat-grp" style="margin-top:32px">
+    <div class="feat-grp feat-grp-next">
       <div class="feat-grp-hd"><div class="feat-dot"></div><span class="feat-lbl">Order tracking and reporting</span></div>
       <div class="feat-grid">
         <div class="feat-card"><span class="feat-n">19</span><p class="feat-name">Live order status</p><p class="feat-desc">Stores can see exactly where their order is at any time.</p></div>
@@ -566,7 +576,7 @@ footer strong{color:var(--wh)}
 </div>
 
 <!-- TEAL BOX -->
-<div class="sec" style="padding:48px 0">
+<div class="sec sec-tight">
   <div class="wrap">
     <div class="tq-box">
       <img class="mark m-tq" src="img/section_6.webp" alt="" aria-hidden="true">
@@ -577,7 +587,7 @@ footer strong{color:var(--wh)}
 </div>
 
 <!-- ROLLOUT -->
-<div id="rollout" class="sec" style="padding:48px 0">
+<div id="rollout" class="sec sec-tight">
   <div class="wrap">
     <p class="kicker k-pu" style="margin-bottom:20px">The plan</p>
     <h2 class="sec-title" style="margin-bottom:40px">How we will<br><span class="pu">roll it out.</span></h2>
@@ -592,7 +602,7 @@ footer strong{color:var(--wh)}
 </div>
 
 <!-- STEPS -->
-<div class="sec" style="padding:48px 0">
+<div class="sec sec-tight">
   <div class="wrap">
     <div class="steps-wrap">
       <img class="mark m-steps" src="img/section_9.webp" alt="" aria-hidden="true">
@@ -610,7 +620,7 @@ footer strong{color:var(--wh)}
 </div>
 
 <!-- CONTACT -->
-<div id="contact" class="sec" style="padding:48px 0 80px">
+<div id="contact" class="sec sec-contact">
   <div class="wrap">
     <div class="contact-wrap">
       <div class="contact-top">
